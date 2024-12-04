@@ -13,6 +13,8 @@
     @EventPattern('hello')
     async hello(data:string){
       console.log(`received message: ${data}`);  // Event received from RabbitMQ server
+      console.log(` message: ${data}`);  // Event received from RabbitMQ server
+
     }
     @Get('all')
     async getAllProducts(): Promise<Product[]> {
