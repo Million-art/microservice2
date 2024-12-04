@@ -2,9 +2,11 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose'; // Correct module for MongoDB integration
 import { ProductModule } from './product/product.module';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
+
     ConfigModule.forRoot({
       isGlobal: true, // Make the ConfigModule global
     }),
